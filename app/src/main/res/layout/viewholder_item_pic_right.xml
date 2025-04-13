@@ -22,11 +22,12 @@
     </FrameLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/picMain"
         app:shapeAppearanceOverlay="@style/CircleImageView"
         android:layout_width="145dp"
         android:layout_height="95dp"
         android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="@+id/frameLayout"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />

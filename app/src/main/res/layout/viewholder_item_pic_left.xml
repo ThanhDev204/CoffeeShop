@@ -22,10 +22,11 @@
     </FrameLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/picMain"
         android:layout_width="145dp"
         android:layout_height="95dp"
         android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/CircleImageView"
@@ -41,7 +42,7 @@
         android:textColor="@color/darkBrow"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/picMain"
         app:layout_constraintTop_toTopOf="@+id/frameLayout" />
 
     <RatingBar

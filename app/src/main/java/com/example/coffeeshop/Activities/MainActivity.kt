@@ -1,6 +1,7 @@
 package com.example.coffeeshop.Activities
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ import com.example.coffeeshop.ViewModel.MainViewModel
 import com.example.coffeeshop.databinding.ActivityMainBinding
 
 internal class MainActivity : AppCompatActivity() {
-
+var TAG="zzzzzzzzzzzzzzzzzzzzzzz"
     lateinit var binding: ActivityMainBinding
     private val viewModel = MainViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,6 @@ internal class MainActivity : AppCompatActivity() {
         this.enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         initBanner()
         initCategory()
         initPopular()
@@ -59,5 +59,20 @@ internal class MainActivity : AppCompatActivity() {
             binding.progressBarPopular.visibility = View.GONE
         }
         viewModel.loadPopular()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("zzzzzzzzzzzzzz", "onPause: Paused", )
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.e(TAG, "onRestart: on Restart", )
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e(TAG, "onResume: onResume", )
     }
 }

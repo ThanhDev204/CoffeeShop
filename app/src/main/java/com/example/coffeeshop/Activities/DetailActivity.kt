@@ -69,15 +69,15 @@ class DetailActivity : AppCompatActivity() {
             }
 
             backBtn.setOnClickListener {
-                startActivity(Intent(this@DetailActivity,MainActivity::class.java))
+                finish()
             }
             plusCart.setOnClickListener {
-                numberItemTxt.text= (item.numberInCart+1).toString()
+                numberItemTxt.text = (item.numberInCart + 1).toString()
                 item.numberInCart++
             }
             minusBtn.setOnClickListener {
-                if(item.numberInCart>0){
-                    numberItemTxt.text=(item.numberInCart-1).toString()
+                if (item.numberInCart > 0) {
+                    numberItemTxt.text = (item.numberInCart - 1).toString()
                     item.numberInCart--
                 }
             }
