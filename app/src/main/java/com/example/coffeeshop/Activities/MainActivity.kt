@@ -1,5 +1,6 @@
 package com.example.coffeeshop.Activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -25,6 +26,13 @@ var TAG="zzzzzzzzzzzzzzzzzzzzzzz"
         initBanner()
         initCategory()
         initPopular()
+        initBottonMenu()
+    }
+
+    private fun initBottonMenu() {
+        binding.cartBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity,CartActivity::class.java))
+        }
     }
 
     private fun initBanner() {
